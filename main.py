@@ -1,4 +1,3 @@
-import time
 from pyrogram import Client, filters
 from os import environ
 
@@ -20,8 +19,8 @@ async def run(app, msg):
     while get.text != "none":
         get = await app.get_messages(chat_id=X, message_ids=3)
         await app.approve_all_chat_join_requests(getint)
-        time.sleep(3)
-        await msg.reply("<b>Done.</b>")
+        if get.text == "none":
+            return app        
 
 print("Bot Is Alive..")
 app.run()
