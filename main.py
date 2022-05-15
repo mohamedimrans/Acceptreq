@@ -1,3 +1,4 @@
+import time
 from pyrogram import Client, filters
 from os import environ
 
@@ -16,8 +17,11 @@ async def run(app, msg):
     X = "acceser"
     get = await app.get_messages(chat_id=X, message_ids=3)
     getint = int(get.text)
-    await app.approve_all_chat_join_requests(getint)
-    await msg.reply("<b>Done.</b>")
+    while get.text != "none":
+        get = await app.get_messages(chat_id=X, message_ids=3)
+        await app.approve_all_chat_join_requests(getint)
+        time.sleep(3)
+        await msg.reply("<b>Done.</b>")
 
 print("Bot Is Alive..")
 app.run()
