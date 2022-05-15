@@ -18,13 +18,11 @@
     "API_HASH": {
       "description": "App api_hash from https://my.telegram.org"
     },
-    "BOT_TOKEN": {
-      "description": "Bot token from https://t.me/BotFather",
-      "required": false
+    "PHONE_NUMBER": {
+      "description": "Enter PHONE Number"
     },
     "SESSION_STRING": {
-      "description": "Session string from https://docs.pyrogram.org/api/methods/export_session_string#pyrogram.Client.export_session_string",
-      "required": false
+      "description": "Session string from https://docs.pyrogram.org/api/methods/export_session_string#pyrogram.Client.export_session_string"
     }
   }
 }
