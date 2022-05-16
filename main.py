@@ -6,11 +6,11 @@ app = Client("AutoForwarder", api_id=int(environ["API_ID"]), api_hash=environ["A
              session_string=environ["SESSION_STRING"]
              )
 
-@app.on_message(filters.regex(".start"))
+@app.on_message(filters.regex(".start") & filters.me)
 async def start(app, msg):
     await msg.reply("<b>Hello I'm A Auto Join Request Accept Bot\n\nMade In India :) By @Walker_web</b>")
 
-@app.on_message(filters.regex(".run"))
+@app.on_message(filters.regex(".run") & filters.me)
 async def run(app, msg):
     await msg.reply("<b>Accepting All Requests...</b>")
     X = "acceser"
