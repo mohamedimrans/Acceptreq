@@ -20,7 +20,7 @@ async def run(app, msg):
         get = await app.get_messages(chat_id=X, message_ids=3)
         await app.approve_all_chat_join_requests(getint)
         if get.text == "none":
-            return app        
+            break        
 
 print("Bot Is Alive..")
 app.run()
