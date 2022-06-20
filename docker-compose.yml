@@ -1,6 +1,5 @@
 version: "3.9"
 services:
-   shop:
     build:
     environment:
       API_ID: $API_ID
