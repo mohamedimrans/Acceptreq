@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+   shop:
+    build: .
+    environment:
+      API_ID: $API_ID
+      API_HASH: $API_HASH
+      PHONE_NUMBER: $PHONE_NUMBER
+      SESSION_STRING: $SESSION_STRING
+      
